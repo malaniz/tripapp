@@ -9,7 +9,10 @@ const App = () => (
   <NavigationContainer>
     <Stack.Navigator>
       <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Detail" component={DetailTripScreen} />
+      <Stack.Screen name="Detail"
+        component={DetailTripScreen}
+        initialParams={{trip: 'trip2'}}
+      />
     </Stack.Navigator>
   </NavigationContainer>
 );

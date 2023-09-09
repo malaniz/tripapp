@@ -1,4 +1,5 @@
 import { trip1 } from "../mockupData/trip1"
+import { trip2 } from "../mockupData/trip2"
 import {PlaceProperties} from "./types/Place.interface"
 import {TripPropierties} from "./types/Trip.interface"
 import {WeatherProperties} from "./types/Weather.interface"
@@ -15,19 +16,22 @@ function convertJsonDataToTrip(trip: any): TripPropierties {
 
   return t1 as TripPropierties
 }
-export async function getTrips(): Promise<TripPropierties[]> {
-  const t = convertJsonDataToTrip(trip1)
 
-  return [t, t, t]
+  const t1 = convertJsonDataToTrip(trip1)
+  const t2 = convertJsonDataToTrip(trip2)
+  const t3 = convertJsonDataToTrip(trip2)
+  const mytrips = [t1, t2, t3]
+
+
+export async function getTrips(): Promise<TripPropierties[]> {
+  return mytrips
 }
 
 
 export async function getTrip(id: string): Promise<TripPropierties> {
-  console.log(`GET ${id} -> returning trip1`)
-
-  const t = convertJsonDataToTrip(trip1)
-  return t
+  console.log(`GET ${id}`)
+  const result = mytrips.find((x) => x.id === id)
+  console.log(result)
+  return result
 }
-
-
 

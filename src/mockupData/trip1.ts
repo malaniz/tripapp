@@ -1,7 +1,8 @@
 export const trip1 = { 
   "id": "trip1",
-  "name": "trip1",
-  "description": "description",
+  "name": "7 Lagos",
+  "description": "Recorrido por unos de los lugares mas maravillosos de nuestro pais",
+  "thumbnail": require("./../../assets/trip1-vla.jpg"),
   "karma": {
     "likes": 1,
     "dislikes": 2,
