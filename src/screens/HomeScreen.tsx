@@ -15,7 +15,7 @@ import TripButton from '../components/TripButton';
 
 export default function () {
   const isDarkMode = useColorScheme() === 'dark';
-  const backgroundStyle = 'bg-neutral-300 dark:bg-slate-900';
+  const backgroundStyle = 'bg-gray-900 dark:bg-slate-900';
   const [trips, setTrips] = React.useState<TripPropierties[]>([]);
 
   const doGetTrips = React.useCallback(async () => {
@@ -40,7 +40,7 @@ export default function () {
           </Section>
         </View>
       </SafeAreaView>
-    )
+    );
   }
 
   return (
@@ -53,7 +53,7 @@ export default function () {
         contentInsetAdjustmentBehavior="automatic"
         className={backgroundStyle}>
         <View
-          className="bg-white dark:bg-black flex-1 justify-center"
+          className="bg-gray-900 dark:bg-black flex-1 justify-center"
           style={styles.tripButtonsContainer}>
           <Section title="Viajes que no te podes perder">
             {trips.map((trip, index) => (
@@ -68,6 +68,6 @@ export default function () {
 
 const styles = StyleSheet.create({
   tripButtonsContainer: {
-    marginTop: -40
-  }
-})
+    marginTop: -40,
+  },
+});
