@@ -18,6 +18,7 @@ export default function () {
         <View className="flex-row justify-start">
           <TouchableOpacity
             className="bg-yellow-400 p-3 rounded-full ml-4"
+            style={{backgroundColor: '#dcfe00'}}
             onPress={() => navigation.goBack()}>
             <ArrowLeftIcon size="20" color="black" />
           </TouchableOpacity>
@@ -48,6 +49,7 @@ export default function () {
           </TouchableOpacity>
           <TouchableOpacity
             className="py-3 bg-yellow-400 rounded-xl"
+            style={{backgroundColor: '#dcfe00'}}
             onPress={() => {
               navigation.navigate('Home')
             }}>

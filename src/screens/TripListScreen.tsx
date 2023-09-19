@@ -33,7 +33,7 @@ export default function () {
 
   if (trips.length === 0) {
     return (
-      <SafeAreaView className={backgroundStyle}>
+      <SafeAreaView style={{backgroundColor: '#dcfe00'}}>
         <View className="bg-white dark:bg-black">
           <Section title="Loading">
             <Text> We are trying to load your trips</Text>
@@ -44,7 +44,7 @@ export default function () {
   }
 
   return (
-    <SafeAreaView className={backgroundStyle}>
+    <SafeAreaView style={{backgroundColor: '#dcfe00'}}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle}

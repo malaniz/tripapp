@@ -1,6 +1,12 @@
 import {Link} from '@react-navigation/native';
 import React from 'react';
-import {SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
 export default function ({navigation}: any) {
   return (
@@ -13,6 +19,7 @@ export default function ({navigation}: any) {
       <View className="space-y-4">
         <TouchableOpacity
           className="py-3 bg-yellow-400 mx-7 rounded-xl"
+          style={styles.button}
           onPress={() => navigation.navigate('SignUp')}>
           <Text className="text-xl font-bold text-center text-gray-700">
             Sign Up
@@ -23,10 +30,23 @@ export default function ({navigation}: any) {
         <Text className="text-white font-semibold">
           Already have an account?
           <Link to="/Login">
-            <Text className="font-semibold text-yellow-400">Login</Text>
+            <Text
+              className="font-semibold text-yellow-400"
+              style={styles.loginText}>
+              Login
+            </Text>
           </Link>
         </Text>
       </View>
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  button: {
+    backgroundColor: '#dcfe00',
+  },
+  loginText: {
+    color: '#dcfe00',
+  },
+})
